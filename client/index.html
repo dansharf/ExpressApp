@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src= "/node_modules/angular/angular.js"></script>
+  <script src="/index.js"></script>
+</head>
+
+<body>
+<p>Yellow Book</p>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<table>
+  <th>Contacts</th>
+  <tr>
+    <td>First Name:</td>
+    <td colspan=4><input type="text" ng-model="firstName"></td>
+  </tr>
+  <tr>
+    <td>Last Name:</td>
+    <td colspan=4><input type="text" ng-model="lastName"></td>
+  </tr>
+</table>
+<br>
+<div>
+  <button ng-click="insert()">Insert</button>
+  <button ng-click="show()">Show All</button>
+  <button ng-click="find()">Find by firstname</button>
+  <button ng-click="remove()">Remove by fullname</button>
+  <!-- <button ng-click="update()">Update</button> -->
+
+</div>
+<br>
+<hr>
+
+  <table border = "0">
+    <tr>
+      <th colspan='2'>
+        Total number of contacts: {{contactsNum}}
+      </th>
+    </tr>
+    <tr>
+      <th>
+        FirstName
+      </th>
+      <th>
+        LastName
+      </th>
+    </tr>
+
+    <!-- <tr ng-repeat="name in contactsNames">
+      <td>
+        {{name.firstName}}
+      </td>
+      <td>
+        {{name.lastName}}
+      </td>
+    </tr> -->
+
+    <tr ng-repeat="name in contactsNames">
+      <td>
+        {{name.firstName}}
+      </td>
+      <td>
+        {{name.lastName}}
+      </td>
+    </tr>
+
+  </table>
+</pre>
+
+</div>
+
+</body>
+</html>
